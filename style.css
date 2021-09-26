@@ -2,6 +2,7 @@
     --color-dark-accent: hsl(0, 0%, 10%);
     --color-light-text: white;
     --nav-height: 64px;
+    --heading-size: calc(2rem + 6vw);
 }
 
 html {
@@ -37,17 +38,16 @@ p {
 }
 
 h1 {
-    font-size: calc(1rem + 8vw);
+    font-size: var(--heading-size);
 }
 
 h2 {
-    font-size: calc((1rem + 8vw) * 0.75);
+    font-size: calc(var(--heading-size) * 0.75);
 }
 
 header {
     display: grid;
     grid-auto-flow: row;
-    place-content: center;
     place-items: center;
 
     height: calc(100vh - var(--nav-height));
@@ -69,8 +69,15 @@ header {
     color: var(--color-light-text);
 }
 
+header div {
+    text-align: center;
+    padding: 0em 2em 0.8em;
+    border: 2px solid var(--color-light-text);
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+
 header p {
-    font-size: 2em;
+    font-size: calc((var(--heading-size)*0.25) + 0.5rem);
 }
 
 
@@ -98,7 +105,7 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin: 0em 1em;
+    margin: 0em 4vw;
 }
 
 /* Nav button styling */
@@ -115,18 +122,13 @@ nav a:focus {
     transition: ease-in-out 100ms;
 }
 
-/* main {
-    scroll-snap-align: start;
-} */
-
 #menu {
     display: flex;
     
     width: 100;
     padding: 50px;
 
-
-    background-color: white;
+    background-color: rgb(249, 251, 255);
 }
 
 #menu-card {
