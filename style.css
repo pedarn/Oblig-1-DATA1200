@@ -123,8 +123,9 @@ nav a:focus {
     transition: ease-in-out 100ms;
 }
 
-main article {
-    display: flex;
+main {
+    display: grid;
+    place-items: center;
     
     width: 100%;
     padding: 50px;
@@ -137,9 +138,19 @@ main article {
     background-image: 
         repeating-linear-gradient(45deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
         repeating-linear-gradient(-45deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
-        repeating-linear-gradient(0deg, var(--color-red-transparent) , var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-white-transparent) var(--checkered-pattern-spacing), var(--color-white-transparent) calc(var(--checkered-pattern-spacing)*2)), 
-        repeating-linear-gradient(90deg, var(--color-red-transparent), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-white-transparent) var(--checkered-pattern-spacing), var(--color-white-transparent) calc(var(--checkered-pattern-spacing)*2));
+        repeating-linear-gradient(180deg, var(--color-white-transparent) , var(--color-white-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)), 
+        repeating-linear-gradient(90deg, var(--color-white-transparent) , var(--color-white-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)); 
         background-blend-mode: multiply;
+}
+
+.menu-card section>*:first-child {
+    font-size: 2em;
+    /* top: var(--nav-height); */
+    /* position: sticky; */
+    /* text-align: end; */
+    margin: 0 auto;
+
+    grid-column: 1 / end;
 }
 
 .menu-card {
@@ -149,7 +160,7 @@ main article {
     width: 800px;
 
     margin: 50px auto;
-    margin-top: var(--nav-height));
+    margin-top: var(--nav-height);
     padding: 5em 8em;
  
     background-color: whitesmoke;
@@ -170,16 +181,6 @@ main article {
     grid-template-columns: min-content auto;
 
     margin-bottom: 200px;
-}
-
-main article section>*:first-child {
-    font-size: 2em;
-    /* top: var(--nav-height); */
-    /* position: sticky; */
-    /* text-align: end; */
-    margin: 0 auto;
-
-    grid-column: 1 / end;
 }
 
 .dish-card::before {
