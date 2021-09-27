@@ -185,10 +185,17 @@ main article section>*:first-child {
     border-bottom: 2px solid black;
 }
 
-.dish-card>* {
+.dish-card>*:not(img) {
     align-self: baseline;
     grid-column-start: 1;
     font-style: normal;
+}
+
+.dish-card>img {
+    grid-column-start: 1;
+    display: block;
+    float: left;
+    height: 200px;
 }
 
 .dish-card>p:first-of-type {
