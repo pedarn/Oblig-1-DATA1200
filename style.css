@@ -3,6 +3,9 @@
     --color-light-text: white;
     --nav-height: 64px;
     --heading-size: calc(2rem + 6vw);
+    --color-red-transparent: rgba(255, 0, 0, 0.5);
+    --color-white-transparent: rgba(255, 255, 255, 0.5);
+
 }
 
 html {
@@ -125,7 +128,21 @@ nav a:focus {
     /* Gjør høyden 100% av skjermens høyde - nav */
     /* height: calc(100vh - var(--nav-height)); */
 
-    background-color: rgb(249, 251, 255);
+    background-color: rgb(255, 255, 255);
+    background-image: repeating-linear-gradient(
+        0deg,
+        var(--color-red-transparent), 
+        var(--color-red-transparent) 40px,
+        var(--color-white-transparent) 40px,
+        var(--color-white-transparent) 80px
+    ),
+        repeating-linear-gradient(
+            90deg,
+            var(--color-red-transparent), 
+            var(--color-red-transparent) 40px,
+            var(--color-white-transparent) 40px,
+            var(--color-white-transparent) 80px
+    );
 }
 
 #menu-card {
