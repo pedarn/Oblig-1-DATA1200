@@ -129,20 +129,9 @@ nav a:focus {
     /* height: calc(100vh - var(--nav-height)); */
 
     background-color: rgb(255, 255, 255);
-    background-image: repeating-linear-gradient(
-        0deg,
-        var(--color-red-transparent), 
-        var(--color-red-transparent) 40px,
-        var(--color-white-transparent) 40px,
-        var(--color-white-transparent) 80px
-    ),
-        repeating-linear-gradient(
-            90deg,
-            var(--color-red-transparent), 
-            var(--color-red-transparent) 40px,
-            var(--color-white-transparent) 40px,
-            var(--color-white-transparent) 80px
-    );
+    background-image: 
+        repeating-linear-gradient(0deg, var(--color-red-transparent) , var(--color-red-transparent) 40px, var(--color-white-transparent) 40px, var(--color-white-transparent) 80px), 
+        repeating-linear-gradient(90deg, var(--color-red-transparent), var(--color-red-transparent) 40px, var(--color-white-transparent) 40px, var(--color-white-transparent) 80px);
 }
 
 #menu-card {
