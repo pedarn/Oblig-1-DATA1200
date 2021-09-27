@@ -182,6 +182,7 @@ nav a:focus {
 .dish-card>* {
     align-self: baseline;
     grid-column-start: 1;
+    font-style: normal;
 }
 
 .dish-card>p:first-of-type {
