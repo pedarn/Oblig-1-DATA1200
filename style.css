@@ -147,12 +147,12 @@ main article {
  
     background-color: whitesmoke;
     outline: 1px solid lightgray;
-    box-shadow: 1em 1em 2em darkgray;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.50);
 }
 
 .menu-card>h2 {
     justify-self: center;
-    margin: 0 0 1em;
+    margin: 0 0 0.5em;
 
     grid-column: 1 / end;
 }
@@ -167,11 +167,12 @@ main article {
 
 main article section>*:first-child {
     font-size: 2em;
-    top: var(--nav-height);
-    position: sticky;
-    text-align: end;
+    /* top: var(--nav-height); */
+    /* position: sticky; */
+    /* text-align: end; */
+    margin: 0 auto;
 
-    grid-column-start: 1;
+    grid-column: 1 / end;
 }
 
 .dish-card::before {
