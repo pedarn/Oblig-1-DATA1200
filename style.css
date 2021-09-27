@@ -8,8 +8,8 @@
 
     --color-dark-accent: hsl(0, 0%, 10%);
     --color-light-text: white;
-    --color-red-transparent: rgba(255, 0, 0, 0.5);
-    --color-white-transparent: rgba(255, 255, 255, 0.5);
+    --color-red-transparent: rgba(234, 13, 1, 0.6);
+    --color-transparent: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -134,23 +134,13 @@ main {
     /* height: calc(100vh - var(--nav-height)); */
 
     /* Denne delen av koden lager en rutete bakgrunn, endre --checkered-pattern-spacing for å justere størrelsen */
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(252, 251, 248);
     background-image: 
         repeating-linear-gradient(45deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
         repeating-linear-gradient(-45deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
-        repeating-linear-gradient(180deg, var(--color-white-transparent) , var(--color-white-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)), 
-        repeating-linear-gradient(90deg, var(--color-white-transparent) , var(--color-white-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)); 
+        repeating-linear-gradient(180deg, var(--color-transparent) , var(--color-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)), 
+        repeating-linear-gradient(90deg, var(--color-transparent) , var(--color-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)); 
         background-blend-mode: multiply;
-}
-
-.menu-card section>*:first-child {
-    font-size: 2em;
-    /* top: var(--nav-height); */
-    /* position: sticky; */
-    /* text-align: end; */
-    margin: 0 auto;
-
-    grid-column: 1 / end;
 }
 
 .menu-card {
@@ -163,10 +153,10 @@ main {
     margin-top: var(--nav-height);
     padding: 5em 8em;
  
-    background-color: whitesmoke;
+    background-color: rgb(249, 251, 255);
     outline: 1px solid lightgray;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.50);
-}
+}y
 
 .menu-card>h2 {
     justify-self: center;
@@ -183,15 +173,15 @@ main {
     margin-bottom: 200px;
 }
 
-.dish-card::before {
-    content: "";
-    border-bottom: 2px solid black;
+.menu-card section>*:first-child {
+    font-size: 2em;
+    /* top: var(--nav-height); */
+    /* position: sticky; */
+    /* text-align: end; */
+    margin: 0 auto;
 
-    margin: 0 var(--dish-card-margin);
     grid-column: 1 / end;
-    grid-row: 2;
 }
-
 
 .dish-card {
     grid-column-start: 2;
@@ -230,6 +220,15 @@ main {
     font-family: 'PT Sans Narrow', sans-serif;
     grid-column-start: 2;
     font-size: 1.2em;
+}
+
+.dish-card::before {
+    content: "";
+    border-bottom: 2px solid black;
+
+    margin: 0 var(--dish-card-margin);
+    grid-column: 1 / end;
+    grid-row: 2;
 }
 
 .nowrap {
