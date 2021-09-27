@@ -7,15 +7,13 @@
 
 html {
     scroll-behavior: smooth;
-    /* Fiks for link til meny siden nav er sticky. Ikke støttet? */
-    /* scroll-padding-top: var(--nav-height); */
 }
 
 body {
-    margin: 0;    
-
+    margin: 0;   
+    
     background-color: var(--color-dark-accent);
-
+    
     font-family: 'Raleway', sans-serif;
 }
 
@@ -127,6 +125,9 @@ nav a:focus {
     
     width: 100;
     padding: 50px;
+    
+    /* Gjør høyden 100% av skjermens høyde - nav */
+    /* height: calc(100vh - var(--nav-height)); */
 
     background-color: rgb(249, 251, 255);
 }
@@ -134,14 +135,8 @@ nav a:focus {
 #menu-card {
     display: grid;
     grid-auto-flow: row;
-    /* gap: 100px; */
-    
 
     width: 800px;
-
-    /* Gjør menyen scrollable, bare en test */
-    /* height: 800px;
-    overflow-y: auto; */
 
     margin: 50px auto;
     margin-top: var(--nav-height);
@@ -193,7 +188,7 @@ nav a:focus {
     grid-column-start: 1;
 }
 
-.dish-card>*:last-child {
+.dish-card>p:first-of-type {
     font-family: 'PT Sans Narrow', sans-serif;
     grid-column-start: 2;
     font-size: 1.2em;
