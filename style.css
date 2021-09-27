@@ -47,7 +47,11 @@ h1 {
 }
 
 h2 {
-    font-size: calc(var(--heading-size) * 0.75);
+    font-size: calc(var(--heading-size) * 0.618);
+}
+
+h3 {
+    font-size: calc(var(--heading-size) * 0.618 * 0.618);
 }
 
 header {
@@ -63,7 +67,7 @@ header {
     background-image: url(img/food-on-table-large.jpg);
     background-blend-mode: multiply;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
 
     border: calc(2px + 0.5vw) solid white;
 
@@ -83,15 +87,14 @@ header p {
 
 
 nav {
-    top: -1px;
+    top: 0px;
     position: sticky;
-    z-index: 999;
 
     display: grid;
     place-content: center;
 
     width: 100%;
-    height: var(--nav-height);
+    min-height: var(--nav-height);
 
     background-color: var(--color-dark-accent);
     color: var(--color-light-text);
@@ -128,7 +131,6 @@ main {
     place-items: center;
     
     width: 100%;
-    padding: 50px;
     
     /* Gjør høyden 100% av skjermens høyde - nav */
     /* height: calc(100vh - var(--nav-height)); */
@@ -136,90 +138,96 @@ main {
     /* Denne delen av koden lager en rutete bakgrunn, endre --checkered-pattern-spacing for å justere størrelsen */
     background-color: rgba(252, 251, 248);
     background-image: 
-        repeating-linear-gradient(45deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
-        repeating-linear-gradient(-45deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
+        repeating-linear-gradient(0deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
+        repeating-linear-gradient(90deg, rgb(255,255,255,var(--fabric-texture-opacity)), rgb(255,255,255,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(255,255,255,var(--fabric-texture-opacity)), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/20), rgb(0,0,0,var(--fabric-texture-opacity)) calc(var(--checkered-pattern-spacing)/10)),
         repeating-linear-gradient(180deg, var(--color-transparent) , var(--color-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)), 
         repeating-linear-gradient(90deg, var(--color-transparent) , var(--color-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) var(--checkered-pattern-spacing), var(--color-red-transparent) calc(var(--checkered-pattern-spacing)*2)); 
         background-blend-mode: multiply;
 }
 
-.menu-card {
+article{
     display: grid;
     grid-auto-flow: row;
+    place-items: center;
 
-    width: 800px;
+    min-width: 61.8%;
 
-    margin: 50px auto;
     margin-top: var(--nav-height);
-    padding: 5em 8em;
  
     background-color: rgb(249, 251, 255);
     outline: 1px solid lightgray;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.50);
-}y
-
-.menu-card>h2 {
-    justify-self: center;
-    margin: 0 0 0.5em;
-
-    grid-column: 1 / end;
 }
 
-.menu-card>section {
+article>* {
+    max-width: 61.8%;
+}
+
+article>h2 {
+    text-align: center;
+    margin: 1.618em 0 0.618em;
+}
+
+article>section {
     display: grid;
     gap: 2em;
     grid-template-columns: min-content auto;
 
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
-.menu-card section>*:first-child {
-    font-size: 2em;
-    /* top: var(--nav-height); */
-    /* position: sticky; */
-    /* text-align: end; */
-    margin: 0 auto;
+/* eg: Lunch, Main-Dish */
+article section>*:first-child {
+    text-align: center;
+    margin-bottom: 0.618em;
 
     grid-column: 1 / end;
 }
 
 .dish-card {
+    text-align: left;
     grid-column-start: 2;
     
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: auto min-content;
+    /* grid-template-columns: auto min-content; */
     
     margin: calc(-1 * var(--dish-card-margin));
 
-    padding-bottom: 2em;
+    padding-bottom: 2rem;
 }
 
 .dish-card>* {
     margin: var(--dish-card-margin);
 }
 
-.dish-card>*:not(img) {
+.dish-card>*:first-child {
+    font-size: 1.618rem;
+}
+
+.dish-card>p:first-of-type {
+    grid-column: 2;
+
+    text-align: right;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.618rem;
+}
+
+.dish-card>* {
     align-self: baseline;
-    grid-column-start: 1;
+    grid-column: 1;
     font-style: normal;
 }
 
 .dish-card>img {
-    grid-column-start: 1;
-    display: block;
-    float: left;
-    
     height: 200px;
     width: 200px;
+
+    flex-shrink:101;
+
+    float: left;
     object-fit: cover;
     object-position: bottom left;
-}
-
-.dish-card>p:first-of-type {
-    font-family: 'PT Sans Narrow', sans-serif;
-    grid-column-start: 2;
-    font-size: 1.2em;
 }
 
 .dish-card::before {
@@ -227,7 +235,7 @@ main {
     border-bottom: 2px solid black;
 
     margin: 0 var(--dish-card-margin);
-    grid-column: 1 / end;
+    grid-column: 1 / 3;
     grid-row: 2;
 }
 
@@ -239,10 +247,10 @@ footer {
     display: grid;
     grid-auto-flow: column;
     place-items: center;
-    gap: 2em;
+    gap: 1.618em;
 
-    height: 100px;
-    padding: 2vw;
+    height: auto;
+    padding: 1.618em;
     
     background-color: var(--color-dark-accent);
     color: var(--color-light-text);
