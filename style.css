@@ -220,3 +220,6 @@ footer {
     background-color: var(--color-dark-accent);
     color: var(--color-light-text);
 }
+.about{
+    color: #fff;
+}
