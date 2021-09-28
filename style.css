@@ -74,6 +74,7 @@ header {
     color: var(--color-light-text);
 }
 
+/* This part was added to increase the text contrast against the background image after using a color contrast validator */
 header div {
     text-align: center;
     padding: 0em 2em 0.8em;
