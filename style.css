@@ -63,7 +63,7 @@ header {
     width: 100%;
     padding: 20px;
 
-    background-color: hsl(0, 0%, 50%);
+    background-color: hsl(0, 0%, 80%);
     background-image: url(img/food-on-table-large.jpg);
     background-blend-mode: multiply;
     background-size: cover;
@@ -78,8 +78,8 @@ header {
 header div {
     text-align: center;
     padding: 0em 2em 0.8em;
-    border: 2px solid var(--color-light-text);
-    background-color: hsla(0, 0%, 0%, 0.5);
+    border: 5px solid var(--color-light-text);
+    background-color: hsla(0, 0%, 0%, 0.75);
 }
 
 header p {
