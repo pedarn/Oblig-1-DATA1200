@@ -33,9 +33,17 @@
     <main>
         <article id="report">
             <h2>report</h2>
-            <p>This is the report </p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio quo doloremque dolorem fugit. Nisi ad perspiciatis explicabo rerum dolorum fugit suscipit odit beatae rem, facilis ex! Iste est laborum eligendi excepturi dicta maxime. Quia voluptatibus, nulla consectetur saepe voluptatum possimus ad repellendus sit quisquam quod, quis sunt nemo, quaerat officia.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, qui culpa. Itaque soluta possimus eum laborum saepe? Ipsam, quo consequuntur! Adipisci, unde, ab hic necessitatibus qui minus possimus sint ducimus ipsum quos illo laudantium laborum quidem tempora corporis a! Nihil, quasi beatae? Praesentium deleniti iure laborum ut minima ducimus dolores itaque pariatur ipsum voluptatem, voluptates ullam officiis, nihil culpa aliquam.</p>
+            <p>Everybody should be able to use the internet, and therefore we think that the developers have a responsibility to make this possible. Our society is diverse and people with different disabilities such as bad vision, problems with hand coordination or loss of body functionalities should regardless of their difficulties be able to navigate on the internet. That’s why we spent some time in the planning phase to ensure that everyone could navigate our page without problems. </p>
+
+            <p>We wanted to make a simple restaurant page, that would be easy to navigate with the keyboard. Also, we wanted the webpage to have some elements that would make it easier to find through search engines, for example we tried to name the pictures, so they were more specific instead of name like Hgu6754-9.jpg. For more accessibility we talked about how our page would be presented by a screen reader, we made the allergens in <em></em> to mark it both visually and when spoken by a screen reader.</p>
+
+            <p>For accessibility it is possible to navigate with keys. Made sure it was possible to scroll using the arrows and navigating the menu with the tab key. In addition, you can navigate between address, e-mail, phone number and link to license for pictures through the tab key. We also added a border using the :focus and :hover pseudo classes to even better highlight what element was being targeted.</p>
+
+            <p>By validating the HTML file at validator.w3.org we did receive some possible improvements. The format inside the &lt;time&gt;&lt;/time&gt; tag in the footer was written with an am/pm format. This was changed from a 12-hour clock to a 24-hour clock format e.g “00:00”. We also had a few typos and stray closing tags. In addition we received an error message regarding &lt;address&gt;&lt;/address&gt; but did not find a suitable solution and decided to keep it for the time being. We also added the possibility to find the address and send e-mail through using the keys. </p>
+
+            <p>Because we had a title overlaying an image background, we thought we should make sure it was readable to everyone. We used a color contrast accessibility validator (https://color.a11y.com/?wc3) and it was suggested to have more contrast between the header title of the page and the background. A second box with a darker shade was then added as a background which solved this issue. 
+
+            </p>
         </article>
     </main>
     <footer id="about">
