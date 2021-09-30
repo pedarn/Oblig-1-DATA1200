@@ -168,6 +168,7 @@ article>* {
 article>p {
     margin-bottom: 2em;
     text-align: left;
+    line-height: 160%;
 }
 
 article>h2 {
