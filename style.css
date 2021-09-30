@@ -171,6 +171,10 @@ article>p {
     line-height: 160%;
 }
 
+article>p:last-child {
+    margin-bottom: 100px;
+}
+
 article>h2 {
     text-align: center;
     margin: 1.618em 0 0.618em;
