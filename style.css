@@ -154,9 +154,9 @@ article{
     grid-auto-flow: row;
     place-items: center;
 
-    min-width: 61.8%;
+    width: 61.8%;
 
-    margin-top: var(--nav-height);
+    margin: var(--nav-height) auto;
  
     background-color: rgb(249, 251, 255);
     outline: 1px solid lightgray;
