@@ -136,9 +136,6 @@ main {
     
     width: 100%;
     
-    /* Gjør høyden 100% av skjermens høyde - nav */
-    /* height: calc(100vh - var(--nav-height)); */
-
     /* Denne delen av koden lager en rutete bakgrunn, endre --checkered-pattern-spacing for å justere størrelsen */
     background-color: rgba(252, 251, 248);
     background-image: 
@@ -152,8 +149,9 @@ main {
 article{
     display: grid;
     grid-auto-flow: row;
+    /* grid-template-columns: 61.8%; */
     place-items: center;
-
+    
     width: 61.8%;
 
     margin: var(--nav-height) auto;
@@ -165,6 +163,11 @@ article{
 
 article>* {
     max-width: 61.8%;
+}
+
+article>p {
+    margin-bottom: 2em;
+    text-align: left;
 }
 
 article>h2 {
