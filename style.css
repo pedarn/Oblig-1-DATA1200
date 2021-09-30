@@ -1,6 +1,6 @@
 :root {
     --nav-height: 64px;
-    --heading-size: calc(2rem + 6vw);
+    --heading-size: calc(8rem);
     --dish-card-margin: 0.5em;
 
     --checkered-pattern-spacing: 80px;
@@ -69,7 +69,7 @@ header {
     background-size: cover;
     background-position: center;
 
-    border: calc(2px + 0.5vw) solid white;
+    border: calc(10px) solid white;
 
     color: var(--color-light-text);
 }
@@ -110,7 +110,7 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin: 0em 4vw;
+    margin: 0 2em;
 }
 
 /* Nav button styling */
